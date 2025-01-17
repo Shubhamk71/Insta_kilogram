@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+    <!-- Background Rectangle with rounded corners -->
+    <rect x="10" y="10" width="380" height="100" rx="20" fill="#4a90e2" filter="url(#shadow)"/>
+    
+    <!-- Define Shadow Filter -->
+    <defs>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        <!-- Gradient for text -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ffffff"/>
+            <stop offset="100%" style="stop-color:#f0f0f0"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Camera Icon -->
+    <g transform="translate(40, 35) scale(0.8)">
+        <rect x="0" y="0" width="50" height="40" rx="5" fill="#ffffff"/>
+        <circle cx="25" cy="20" r="12" fill="none" stroke="#4a90e2" stroke-width="3"/>
+        <circle cx="25" cy="20" r="6" fill="#4a90e2"/>
+        <rect x="35" y="5" width="10" height="5" fill="#4a90e2"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="110" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#textGradient)">
+        Insta Kilogram
+    </text>
+    
+    <!-- Weight Scale Icon -->
+    <g transform="translate(320, 35) scale(0.7)">
+        <circle cx="25" cy="25" r="20" fill="#ffffff"/>
+        <text x="25" y="35" font-family="Arial, sans-serif" font-size="24" fill="#4a90e2" text-anchor="middle">kg</text>
+    </g>
+</svg>
